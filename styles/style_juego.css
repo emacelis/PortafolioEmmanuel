@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Bitter', serif;
+}
+
+#inicio1{
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  margin: 10px 10px;
+}
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 40px;
+}
+header p {
+  font-size: 25px;
+}
+
+.pads {
+  background: red;
+  width: 100%;
+  display: flex;
+}
+.pads > div {
+  height: 100px;
+  width: 100px;
+  flex: 1;
+}
+.pad1 {
+  background: #d36060;
+}
+.pad2 {
+  background: #da8383;
+}
+.pad3 {
+  background: #df9b9b;
+}
+.pad4 {
+  background: #daa6a6;
+}
+.pad5 {
+  background: #d6b3b3;
+}
+.pad6 {
+  background: #e0cfcf;
+}
+
+.visual > div {
+  position: absolute;
+  bottom: 0%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transform: scale(1);
+  z-index: -1;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 00%;
+    left: 80%;
+  }
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: #f08383;
+  text-decoration: none;
+}
+
+/*BACKGROUN ANIMADO*/
+ .background {
+  position: absolute;
+  width: 40%;
+  height: 45%;
+  overflow: hidden;
+  top: 33%;
+  left: 35%;
+  transition: all 2s ease-in-out;
+  z-index: 2;
+}
+
+ .background .rotar {
+  position: absolute;
+  top: calc(50%-100px);
+  left: calc(50%-100px);
+  width: 400px;
+  height: 400px;
+  transform-style: preserve-3d;
+  animation: rotar 60s linear infinite;
+  /* zoom: 5; */
+  transition: all 2s ease-in-out;
+
+}
+
+@keyframes rotar {
+  0% {
+      transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+      transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+
+ .background .rotar .esfera {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  transform-style: preserve-3d;
+  z-index: 0;
+}
+
+ .background .rotar:hover {
+  transition: all 2s ease-in-out;
+  transform-style: preserve-3d;
+  animation: rotar2 60s linear infinite;
+}
+
+ .background .rotar .esfera:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.background .rotar .esfera:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+ .background .rotar .esfera:nth-child(4) {
+  transform: rotate(-45deg);
+}
+
+.background .rotar .esfera span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  background: radial-gradient(#f08383, #fff);
+  border-radius: 50%;
+
+}
+
+ .background .rotar .esfera span:nth-child(1) {
+  transform: rotateY(0deg);
+}
+
+ .background .rotar .esfera span:nth-child(2) {
+  transform: rotateY(30deg);
+}
+
+ .background .rotar .esfera span:nth-child(3) {
+  transform: rotateY(60deg);
+}
+
+.background .rotar .esfera span:nth-child(4) {
+  transform: rotateY(90deg);
+}
+
+.background .rotar .esfera span:nth-child(5) {
+  transform: rotateY(120deg);
+}
+
+.background .rotar .esfera span:nth-child(6) {
+  transform: rotateY(150deg);
+}
+
+/*BACKGROUN ANIMADO*/
+.slider5 {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to left, #f08383, #e2d7d7);
+  z-index: 999999;
+}
